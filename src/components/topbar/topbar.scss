@@ -3,9 +3,27 @@
 .topbar {
   width: 100%;
   height: 70px;
-  background-color: $mainColor;
+  background: white;
+  color: $mainColor;
   position: fixed;
   top: 0;
   // for the topbar to be on top when scroll down the page
   z-index: 2;
+
+  .wrapper {
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    // split the item evenly on the Topbar
+    justify-content: space-between;
+
+    .left {
+      .logo {
+        font-size: 30px;
+        font-weight: 700;
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
 }
