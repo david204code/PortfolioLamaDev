@@ -1,0 +1,17 @@
+.app {
+  height: 100vh;
+  .sections {
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: lightsalmon;
+    position: relative;
+    // start after 70px
+    top: 70px;
+
+    // for each element inside
+    > * {
+      width: 100vw;
+      height: calc(100vh - 70px);
+    }
+  }
+}
