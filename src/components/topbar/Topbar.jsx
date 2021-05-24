@@ -10,6 +10,7 @@ export default function topbar() {
           <a href="#intro" className="logo">
             Peace be to you
           </a>
+          <div className="itemContainer"></div>
         </div>
         <div className="right">Right side</div>
       </div>
