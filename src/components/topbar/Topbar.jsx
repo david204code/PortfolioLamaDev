@@ -4,7 +4,7 @@ import { Person, Mail } from "@material-ui/icons";
 
 export default function topbar() {
   return (
-    <div className="topbar">
+    <div className="topbar active">
       <div className="wrapper">
         <div className="left">
           {/* logo */}
