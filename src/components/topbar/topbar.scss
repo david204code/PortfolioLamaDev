@@ -9,6 +9,7 @@
   top: 0;
   // for the topbar to be on top when scroll down the page
   z-index: 2;
+  transition: all 1s ease;
 
   .wrapper {
     padding: 10px 30px;
