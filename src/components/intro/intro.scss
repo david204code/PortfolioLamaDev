@@ -1,3 +1,14 @@
 .intro {
-  background-color: lightpink;
+  background-color: white;
+  // makes it horizontal
+  display: flex;
+
+  .left {
+    flex: 0.5;
+    background: red;
+  }
+  .right {
+    flex: 0.5;
+    background: blue;
+  }
 }
