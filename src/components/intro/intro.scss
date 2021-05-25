@@ -5,10 +5,26 @@
 
   .left {
     flex: 0.5;
-    background: red;
+    overflow: hidden;
+
+    .imageContainer {
+      width: 700px;
+      height: 700px;
+      background: crimson;
+      border-radius: 50%;
+
+      // center the image
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      float: right;
+
+      img {
+        height: 90%;
+      }
+    }
   }
   .right {
     flex: 0.5;
-    background: blue;
   }
 }

@@ -4,7 +4,11 @@ import "./intro.scss";
 export default function Intro() {
   return (
     <div className="intro" id="intro">
-      <div className="left">left</div>
+      <div className="left">
+        <div className="imageContainer">
+          <img src="assets/man.png" alt="Picture of a man" />
+        </div>
+      </div>
       <div className="right">right</div>
     </div>
   );
