@@ -6,15 +6,15 @@ export default function Intro() {
     <div className="intro" id="intro">
       <div className="left">
         <div className="imageContainer">
-          <img src="assets/man.png" alt="Picture of a man" />
+          <img src="assets/man.png" alt="ImageOfaMan" />
         </div>
       </div>
       <div className="right">
         <div className="wrapper">
           <h2>Hi There, I'm</h2>
-          <h1>Jonathan Sword</h1>
+          <h1>David Wu</h1>
           <h3>
-            Freelance<span></span>
+            Ambassador of Christ <span>Worshipper</span>
           </h3>
         </div>
         <a href="#portfolio">
