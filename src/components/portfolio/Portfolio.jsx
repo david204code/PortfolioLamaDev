@@ -2,6 +2,13 @@ import React from "react";
 import { useState } from "react";
 import "./portfolio.scss";
 import PortfolioList from "../portfolioList/PortfolioList";
+import {
+  featuredPortfolio,
+  webPortfolio,
+  mobilePortfolio,
+  designPortfolio,
+  contentPortfolio,
+} from "../../data";
 
 export default function Portfolio() {
   // for the purpose of the active option on the menu
