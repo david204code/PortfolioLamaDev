@@ -78,7 +78,7 @@ export default function Portfolio() {
       </ul>
       <div className="container">
         {data.map((d) => (
-          <div className="item" key={d.data}>
+          <div className="item" key={d.id}>
             <img src={d.img} alt="logo" />
             <h3>{d.title}</h3>
           </div>
