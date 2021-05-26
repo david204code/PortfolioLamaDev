@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./portfolio.scss";
 import PortfolioList from "../portfolioList/PortfolioList";
 import {
@@ -13,6 +13,9 @@ import {
 export default function Portfolio() {
   // for the purpose of the active option on the menu
   const [selected, setSelected] = useState("featured");
+
+  // one more use state for the data
+  const [data, setData] = useState([]);
 
   const list = [
     {
@@ -36,12 +39,36 @@ export default function Portfolio() {
       title: "Content",
     },
   ];
+
+  useEffect(() => {
+    switch (selected) {
+      case "featured":
+        setData(featuredPortfolio);
+        break;
+      case "web":
+        setData(webPortfolio);
+        break;
+      case "mobile":
+        setData(mobilePortfolio);
+        break;
+      case "design":
+        setData(designPortfolio);
+        break;
+      case "content":
+        setData(contentPortfolio);
+        break;
+      default:
+        setData(featuredPortfolio);
+    }
+  }, [selected]);
+
   return (
     <div className="portfolio" id="portfolio">
       <h1>Porfolio</h1>
       <ul>
         {list.map((item) => (
           <PortfolioList
+            key={item.id}
             title={item.title}
             active={selected === item.id}
             setSelected={setSelected}
@@ -50,48 +77,12 @@ export default function Portfolio() {
         ))}
       </ul>
       <div className="container">
-        <div className="item">
-          <img
-            src="https://w7.pngwing.com/pngs/271/19/png-transparent-starling-bank-challenger-bank-business-financial-services-bank-purple-company-violet-thumbnail.png"
-            alt="bank logo"
-          />
-          <h3>Banking App</h3>
-        </div>
-        <div className="item">
-          <img
-            src="https://w7.pngwing.com/pngs/271/19/png-transparent-starling-bank-challenger-bank-business-financial-services-bank-purple-company-violet-thumbnail.png"
-            alt="bank logo"
-          />
-          <h3>Banking App</h3>
-        </div>
-        <div className="item">
-          <img
-            src="https://w7.pngwing.com/pngs/271/19/png-transparent-starling-bank-challenger-bank-business-financial-services-bank-purple-company-violet-thumbnail.png"
-            alt="bank logo"
-          />
-          <h3>Banking App</h3>
-        </div>
-        <div className="item">
-          <img
-            src="https://w7.pngwing.com/pngs/271/19/png-transparent-starling-bank-challenger-bank-business-financial-services-bank-purple-company-violet-thumbnail.png"
-            alt="bank logo"
-          />
-          <h3>Banking App</h3>
-        </div>
-        <div className="item">
-          <img
-            src="https://w7.pngwing.com/pngs/271/19/png-transparent-starling-bank-challenger-bank-business-financial-services-bank-purple-company-violet-thumbnail.png"
-            alt="bank logo"
-          />
-          <h3>Banking App</h3>
-        </div>
-        <div className="item">
-          <img
-            src="https://w7.pngwing.com/pngs/271/19/png-transparent-starling-bank-challenger-bank-business-financial-services-bank-purple-company-violet-thumbnail.png"
-            alt="bank logo"
-          />
-          <h3>Banking App</h3>
-        </div>
+        {data.map((d) => (
+          <div className="item" key={d.data}>
+            <img src={d.img} alt="logo" />
+            <h3>{d.title}</h3>
+          </div>
+        ))}
       </div>
     </div>
   );
