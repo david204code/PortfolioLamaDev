@@ -2,6 +2,22 @@
   background-color: crimson;
   display: flex;
   align-items: center;
+  position: relative;
+
+  .arrow {
+    height: 50px;
+    position: absolute;
+    cursor: pointer;
+
+    &.left {
+      left: 100px;
+      transform: rotate(180deg);
+    }
+
+    &.right {
+      right: 100px;
+    }
+  }
 
   .slider {
     height: 350px;
