@@ -50,6 +50,13 @@
         background: rgb(245, 227, 230);
         border-radius: 10px;
       }
+
+      .bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
     }
   }
 }
